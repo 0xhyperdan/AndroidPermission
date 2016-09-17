@@ -1,0 +1,67 @@
+<resources>
+    <!--首页刷新-->
+    <string name="smoothlistview_header_hint_normal">下拉刷新</string>
+    <string name="smoothlistview_header_hint_ready">松开刷新数据</string>
+    <string name="smoothlistview_header_hint_loading">正在加载...</string>
+    <string name="smoothlistview_header_last_time">上次更新时间：</string>
+    <string name="smoothlistview_footer_hint_normal">查看更多</string>
+    <string name="smoothlistview_footer_hint_ready">松开载入更多</string>
+    <!--==============================================================================-->
+    <!--==============================================================================-->
+    <!--==============================================================================-->
+    <!--==============================================================================-->
+    <string name="app_name">惠售房</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="password">密码</string>
+    <string name="account">手机号</string>
+    <string name="save">保存</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="sign">签到</string>
+    <string name="city">济南</string>
+    <string name="please_select">请选择</string>
+    <string name="register_account">注册账号</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="please_input_account">请输入您的手机号</string>
+    <string name="please_input_password">请输入您的密码</string>
+    <string name="please_input_new_password">请输入新密码</string>
+    <string name="please_input_code">输入验证码</string>
+    <string name="register_now">立即注册</string>
+    <string name="code">验证码</string>
+    <string name="please_input_old">请输入旧密码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="get_code_success">获取成功</string>
+    <string name="get_code_rest">重新获取</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="please_input_confirm_password">请再次输入密码</string>
+    <string name="agree_agreement">我已阅读并同意</string>
+    <string name="register_agree">注册协议</string>
+    <string name="register_agreement">《用户注册协议》</string>
+    <string name="please_agreement">请先同意注册协议</string>
+    <string name="forget">忘记密码</string>
+    <string name="modify_info">修改XX</string>
+    <string name="please_input_right_phone">请输入正确的手机号！！！</string>
+    <string name="dialog_title">查看回复</string>
+    <string name="please_bind_dialog_content">请先绑定银行卡</string>
+    <string name="message_detail">消息详情</string>
+    <!--============================================================-->
+    <!--====================手势密码=================================-->
+    <!--============================================================-->
+    <string name="sure_restore_gesture">确认要清除手势密码吗？</string>
+    <string name="please_input_gesture">请输入手势密码解锁</string>
+    <string name="gesture_error_times_out">错误次数过多,请稍后再试 </string>
+    <string name="clean_success">清除成功</string>
+    <string name="draw_gesture">绘制手势密码</string>
+    <string name="draw_fail">与上一次绘制不一致，请重新绘制</string>
+    <string name="set_password_success">密码设置成功</string>
+    <string name="least_count">最少连接4个点，请重新输入</string>
+    <string name="draw_again">再次绘制手势密码</string>
+    <string name="gesture_password_true">手势密码正确</string>
+    <string name="gesture_password_false">手势密码错误</string>
+    <!--============================================================-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,168 @@
+<resources>
+
+    <!-- ========================== 系统自带 ============================ -->
+    <!-- Navigation Header -->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/cm_layout_bg</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ========================== 动画样式 ============================ -->
+
+    <style name="Default.NoTitleBar.Anim" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <!--<item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>-->
+        <!--<item name="android:taskOpenEnterAnimation">@anim/in_from_right</item>-->
+        <!--<item name="android:taskOpenExitAnimation">@anim/out_to_left</item>-->
+        <!--<item name="android:taskCloseEnterAnimation">@anim/in_from_right</item>-->
+        <!--<item name="android:taskCloseExitAnimation">@anim/out_to_left</item>-->
+    </style>
+
+    <!-- ========================== 启动图主题 ============================ -->
+    <style name="StartAppThem" parent="android:Theme.Wallpaper.NoTitleBar.Fullscreen">
+        <item name="android:background">@mipmap/start_image</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <!-- ========================== 引导页 ============================ -->
+    <style name="GuideAppThem" parent="android:Theme.Wallpaper.NoTitleBar.Fullscreen">
+        <item name="android:background">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <!-- ========================== 通用样式 ============================ -->
+    <!-- 顶部标题栏 -->
+    <style name="topbar_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/topBar_height</item>
+        <item name="android:background">@color/topBar_bg</item>
+    </style>
+    <!--头部左边样式-->
+    <!--标题ImageButton样式-->
+    <style name="topbar_btn_left">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--标题TextView样式-->
+    <style name="topbar_tv_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/tv_size_subhead</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--头部右边样式-->
+    <!--标题ImageButton样式-->
+    <style name="topbar_btn_right">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <!--标题TextView样式-->
+    <style name="topbar_tv_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/tv_size_subhead</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 中间题目样式-->
+    <style name="topbar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@color/topBar_title</item>
+        <item name="android:textSize">@dimen/tv_size_title</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--listview样式-->
+    <style name="cm_listview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:dividerHeight">0.8dp</item>
+        <item name="android:divider">@color/cm_line_horizontal</item>
+    </style>
+    <!-- 横线-->
+    <style name="cm_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/cm_line_horizontal</item>
+    </style>
+    <!--竖线-->
+    <style name="cm_line_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/cm_line_horizontal</item>
+    </style>
+    <!-- 选择按钮-->
+    <style name="cm_check">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:button">@null</item>
+    </style>
+    <!--评分条样式-->
+    <style name="rating_bar_style" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@color/cm_white</item>
+        <item name="android:minHeight">13dp</item>
+        <item name="android:maxHeight">13dp</item>
+    </style>
+
+    <!-- ========================== 本项目所用的style ============================ -->
+    <style name="register_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+    </style>
+
+    <style name="register_title_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+</resources>

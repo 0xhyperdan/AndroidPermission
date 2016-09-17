@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <RelativeLayout style="@style/topbar_layout">
+
+        <ImageButton
+            style="@style/topbar_btn_left"
+            android:onClick="back"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:text="@string/register_agree"
+            android:textColor="@color/app_btn" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_notice_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+</LinearLayout>

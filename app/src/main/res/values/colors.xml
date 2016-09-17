@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 系统自带-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- ========================== 通用的color ============================ -->
+    <!-- TopBar -->
+    <color name="cm_tab_bg">#ffffff</color>
+    <!-- -->
+    <color name="topBar_bg">@android:color/transparent</color>
+    <color name="topBar_bg_black">#403f40</color>
+    <color name="topBar_title">@color/cm_white</color>
+
+    <!-- commont -->
+    <color name="cm_driver">#E5E5E5</color>
+    <color name="cm_btn_orange_f">#ef6031</color>
+    <color name="cm_btn_orange_n">#FF6633</color>
+    <color name="cm_btn_orange_yellow">#F6A50A</color>
+
+    <color name="cm_font_orange">#FF6633</color>
+    <color name="cm_font_sky_blue">#36BCE2</color>
+    <color name="cm_font_sky_green">#8AD06E</color>
+
+    <!--背景边框细线-->
+    <color name="cm_line_horizontal">#D3D3D3</color>
+    <!--竖线-分割 -->
+    <color name="cm_line_vertical">#E5E5E5</color>
+
+    <!-- 背景色整体-->
+    <color name="cm_layout_bg">#EFEFEF</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="cm_white">@android:color/white</color>
+
+
+    <!-- 字体颜色-->
+    <color name="approve_item_font">#c81623</color>
+    <color name="cost_record_btn">#C3912A</color>
+    <color name="order_font">#C3912A</color>
+    <color name="yuyue_home">#A2612E</color>
+    <color name="notice_top_font">#C3912A</color>
+    <color name="status_view">#50000000</color>
+    <color name="home_tab">#C81623</color>
+
+    <!-- 背景颜色-->
+    <color name="approve_tv_bg_one">#F7F7F7</color>
+    <color name="approve_tv_bg_two">#4ACC17</color>
+    <color name="approve_tv_bg_there">#F25728</color>
+    <color name="approve_detail_bg">#2B2E38</color>
+    <!--时间选择线-->
+    <color name="province_line_border">#C5C68F</color>
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!-- ========================== 本项目需要用的color ============================ -->
+    <!--默认背景状态栏颜色-->
+    <color name="app_bg">#F1F1F1</color>
+    <!--按钮字体主色调-->
+    <color name="app_btn">#F28B52</color>
+    <!--对话框按钮字体-->
+    <color name="dialog_btn_blue">#3796FE</color>
+    <!--获取验证码按钮bg-->
+    <color name="get_code_bg">#B2B2B2</color>
+    <!--红字-->
+    <color name="app_tv_red">#FF0000</color>
+    <!--公安蓝-->
+    <color name="police_color">#123881</color>
+    <!--家庭成员未激活-->
+    <color name="no_activate">#808080</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="half_transparent">#8f000000</color>
+    <color name="orange">#E60002</color>
+    <!--手势线-->
+    <color name="steel_blue">#6495ED</color>
+</resources>

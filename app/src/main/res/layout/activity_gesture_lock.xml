@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_white"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.baichang.huishoufang.comment.GestureLockActivity">
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="56dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/app_icon" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/gesture_tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="请输入手势密码解锁"
+        android:textColor="@color/tv_black2"
+        android:textSize="@dimen/tv_size_body2" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="32dp" />
+
+    <com.syd.oden.gesturelock.view.GestureLockViewGroup
+        android:id="@+id/gesture_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:color_finger_on="@color/steel_blue"
+        app:color_finger_up_correct="@color/steel_blue"
+        app:color_finger_up_error="@color/app_tv_red"
+        app:color_no_finger="@color/tv_black4"
+        app:psw_count="3" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="1dp"
+        android:layout_height="16dp" />
+
+    <Button
+        android:id="@+id/gesture_btn_forget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/app_btn_bg"
+        android:text="权限测试"
+        android:textColor="@drawable/app_btn_text_bg"
+        android:textSize="@dimen/tv_size_subhead" />
+</LinearLayout>
