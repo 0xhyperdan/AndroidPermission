@@ -46,7 +46,8 @@ public class GestureLockActivity extends BaseAct {
 
     @OnClick(R.id.gesture_btn_forget)
     void forget() {
-        PermissionUtils permission = PermissionUtils.getInstance(GestureLockActivity.this);
+        //PermissionUtils permission = PermissionUtils.getInstance(GestureLockActivity.this);
+        PermissionUtils permission = new PermissionUtils(GestureLockActivity.this);
         //6.0权限拍照测试
         ResetGestureDialog dialog = new ResetGestureDialog();
         dialog.setResetDialogListener(new ResetGestureDialog.ResetDialogListener() {

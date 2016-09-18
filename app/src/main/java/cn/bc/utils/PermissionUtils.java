@@ -19,7 +19,7 @@ public class PermissionUtils {
     public static final String LOCATION = Manifest.permission.LOCATION_HARDWARE;
     private static RxPermissions rxPermission;
 
-    private PermissionUtils(Context context) {
+    public PermissionUtils(Context context) {
         if (context == null) {
             throw new NullPointerException("Context not null");
         }
