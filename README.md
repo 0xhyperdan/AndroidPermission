@@ -99,3 +99,5 @@ AndroidPermission6.0动态权限
     }
     dialog.show(getFragmentManager(), "test");
 ```
+4. Thanks  
+    [RxPermissions](https://github.com/tbruyelle/RxPermissions)
