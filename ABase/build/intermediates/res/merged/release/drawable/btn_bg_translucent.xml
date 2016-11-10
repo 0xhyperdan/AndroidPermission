@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@android:color/transparent" android:state_pressed="false"/>
-    <item android:drawable="@color/translucent_light" android:state_pressed="true"/>
-
-</selector><!-- From: file:/C:/Users/Marcello/Desktop/android_agility_framework-master/agility/src/main/res/drawable/btn_bg_translucent.xml -->

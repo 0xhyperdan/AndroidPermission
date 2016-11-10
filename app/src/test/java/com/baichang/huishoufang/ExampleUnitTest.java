@@ -1,4 +1,3 @@
-package com.baichang.huishoufang;
 
 import org.junit.Test;
 

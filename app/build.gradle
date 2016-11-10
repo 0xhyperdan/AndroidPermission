@@ -7,59 +7,35 @@ def releaseTime() {
 }
 
 android {
-    signingConfigs {
-        //签名信息
-        release {
-            keyAlias 'huishoufang'
-            keyPassword 'huishoufang'
-            storeFile file('D:/desktop/Works/惠售房/发布资料/huishoufang.jks')
-            storePassword 'huishoufang'
-        }
-    }
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
     defaultConfig {
-        applicationId "com.baichang.huishoufang"
-        minSdkVersion 14
+        applicationId "com.baichang.andorid.permission"
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        // dex突破65535的限制
         multiDexEnabled true
-        // 默认是U_men的渠道
         manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
     }
-    //忽略lint错误提示
     lintOptions {
         abortOnError false
     }
     buildTypes {
-        debug { signingConfig signingConfigs.debug }
 
         release {
-            //是否混淆
             minifyEnabled false
-            //混淆文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            // 不显示Log
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            //是否支持zipAlign优化
             zipAlignEnabled true
-            // 移除无用的resource文件
             shrinkResources true
-            //签名信息引用
-            signingConfig signingConfigs.release
-            //打包输出目录
+            signingConfig signingConfigs.debug
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为point_help_v1.0_2015-01-15_wandoujia.apk
-                        //def fileName = "point_help_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                        def fileName = "hui_shou_fang_v${defaultConfig.versionName}_${releaseTime()}.apk"
-                        //默认输出到项目下
-                        //output.outputFile = new File(outputFile.parent, fileName)
-                        output.outputFile = new File("D:\\desktop\\APP", fileName)
+                        def fileName = "AndroidPermission_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                        output.outputFile = new File("D:\\APP", fileName)
                     }
                 }
             }
@@ -69,91 +45,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    //arr引用必设
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-    // 友盟多渠道打包
-    productFlavors {
-        //wandoujia {}
-        //_360 {}
-        //baidu {}
-        //xiaomi {}
-        //tencent {}
-        //taobao {}
-    }
-    //AndroidManifest渠道包占位符替换
     productFlavors.all { flavor ->
         flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
 }
-task clean(type: Exec) {
-    ext.lockhunter = '\"D:\\SoftWare\\LockHunter\\LockHunter.exe\"'
-    def buildDir = file(new File("build"))
-    commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
-}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':ABase')
-    compile project(path: ':ABase')
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     testCompile 'junit:junit:4.12'
-    //垂直滚动公告
-    compile(name: 'MarqueeView', ext: 'aar')
-    //时间日期选择
-    compile(name: 'pickerview', ext: 'aar')
-    //导航栏指示器
-    compile(name: 'magicindicator', ext: 'aar')
-    //饿了么购物
-    compile(name: 'shoppoing', ext: 'aar')
-    //轮播图
-    compile(name: 'banner', ext: 'aar')
-    //手势密码
-    compile(name: 'gesturelock', ext: 'aar')
-    //极光推送
-    compile files('libs/jpush-android-2.1.7.jar')
-    //支付宝
-    compile files('libs/alipaySdk-20160516.jar')
-    //内存泄漏
-    //开发
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
-    //发布
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-    //测试
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-    //注解
-    //图片加载
-    //事件总线
-    // 圆形图片
-    //下拉刷新
-    //ListVIew侧滑删除
-    //友盟统计
-    //v7
-    //v4
-    //RecyclerView
-    //compile 'com.github.autume:GestureLock:1.0.0'                   //手势密码
-    compile 'com.jakewharton:butterknife:8.4.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'de.hdodenhof:circleimageview:2.0.0'
-    compile 'com.github.orangegangsters:swipy:1.1.0@aar'
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    compile 'com.umeng.analytics:analytics:latest.integration'
-//    compile 'com.android.support:appcompat-v7:22.2.1'
-//    compile 'com.android.support:support-v4:22.2.1'
-//    compile 'com.android.support:recyclerview-v7:22.2.1'
-
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:support-v4:23.2.1'
-    compile 'com.android.support:recyclerview-v7:23.2.1'
 
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
-    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'
+    compile 'io.reactivex:rxandroid:1.2.1'//RxAndroid
 }
