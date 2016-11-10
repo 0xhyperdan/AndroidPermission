@@ -1,8 +1,8 @@
 # AndroidPermission6.0
-AndroidPermission6.0+动态权限
+AndroidPermission6.0动态权限
 # How to use？
-1. build.gradle
- ``` compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'```
+1. build.gradle  
+ ``` compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'```  
  ``` compile 'io.reactivex:rxandroid:1.2.1'```
 2. PermissionUtils.class
  	```java
@@ -58,20 +58,22 @@ AndroidPermission6.0+动态权限
     }
 	```
 3. Activity 
-```java
-//PermissionUtils permission = PermissionUtils.getInstance(GestureLockActivity.this);
-PermissionUtils permission = new PermissionUtils(AndroidPermissionActivity.this);
-//6.0权限拍照测试
-AndroidPermissionDialog dialog = new AndroidPermissionDialog();
-dialog.setResetDialogListener(new AndroidPermissionDialog.ResetDialogListener() {
+    ```java
+    //PermissionUtils permission = PermissionUtils.getInstance(GestureLockActivity.this);
+    PermissionUtils permission = new PermissionUtils(AndroidPermissionActivity.this);
+    //6.0权限拍照测试
+    AndroidPermissionDialog dialog = new AndroidPermissionDialog();
+    dialog.setResetDialogListener(new AndroidPermissionDialog.ResetDialogListener() {
     @Override
     public void photo() {
         permission.setPermission(PermissionUtils.CAMERA, grant -> {
             if (grant) {
             	PhotoUtil.choose(AndroidPermissionActivity.this, 1)
             } else {
-                Toast.makeText(AndroidPermissionActivity.this, "没有相机权限", Toast.LENGTH_SHORT).show();    }});
+                Toast.makeText(AndroidPermissionActivity.this, "没有相机权限", Toast.LENGTH_SHORT).show(); 
             }
+        });
+    }
 
     @Override
     public void image() {
@@ -79,18 +81,21 @@ dialog.setResetDialogListener(new AndroidPermissionDialog.ResetDialogListener() 
             if (grant) {
                 PhotoUtil.choose(AndroidPermissionActivity.this, 0);
             } else {
-                Toast.makeText(AndroidPermissionActivity.this, "没有相册权限", Toast.LENGTH_SHORT).show();	   }});
+                Toast.makeText(AndroidPermissionActivity.this, "没有相册权限", Toast.LENGTH_SHORT).show();	   
             }
+        });
+    }
 
     @Override
     public void call() {
-         permission.setPermission(PermissionUtils.CALL, grant -> {
-             if (grant) {
-                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "10086"));
+        permission.setPermission(PermissionUtils.CALL, grant -> {
+            if (grant) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "10086"));
                   startActivity(intent);
-             } else {
-                 Toast.makeText(AndroidPermissionActivity.this, "没有拨打电话权限", Toast.LENGTH_SHORT).show();}  });
-             }
+            } else {
+                Toast.makeText(AndroidPermissionActivity.this, "没有拨打电话权限", Toast.LENGTH_SHORT).show();
+            }  
         });
-dialog.show(getFragmentManager(), "test");
+    }
+    dialog.show(getFragmentManager(), "test");
 ```
