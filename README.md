@@ -1,5 +1,5 @@
 # AndroidPermission6.0
-AndroidPermission6.0动态权限
+🐼 AndroidPermission6.0动态权限
 # How to use？
 1. build.gradle  
  ``` compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'```  
@@ -99,5 +99,4 @@ AndroidPermission6.0动态权限
     }
     dialog.show(getFragmentManager(), "test");
 ```
-4. Thanks  
-    [RxPermissions](https://github.com/tbruyelle/RxPermissions)
+4. Thanks [RxPermissions](https://github.com/tbruyelle/RxPermissions)
