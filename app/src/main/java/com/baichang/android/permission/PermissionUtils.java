@@ -16,7 +16,7 @@ public class PermissionUtils {
     public static final String WRITE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
     public static final String READ = Manifest.permission.READ_EXTERNAL_STORAGE;
     public static final String CONTACTS = Manifest.permission.READ_CONTACTS;
-    public static final String LOCATION = Manifest.permission.LOCATION_HARDWARE;
+    public static final String LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static RxPermissions rxPermission;
 
     public PermissionUtils(Context context) {
