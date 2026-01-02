@@ -69,13 +69,12 @@ public class AndroidPermissionActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == 100 && data != null) {
             //相册
-            PhotoUtil.photoZoom(data.getData());
+            PhotoUtil.photoZoom(this, data.getData());
         } else if (requestCode == 101) {
             //拍照
-            PhotoUtil.photoZoom(null);
+            PhotoUtil.photoZoom(this, null);
         } else if (requestCode == 102 && resultCode != 0) {
             Toast.makeText(AndroidPermissionActivity.this, "图片路径：" + PhotoUtil.getPhotoPath(), Toast.LENGTH_SHORT).show();
-            PhotoUtil.cleanActivity();
         }
     }
 
